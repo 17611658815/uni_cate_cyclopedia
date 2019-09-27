@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/cateDetaile/cateDetaile",
+        "pages/collect/collect",
+        "pages/classify/classify",
+        "pages/search/search",
+        "pages/cateList/cateList"
+    ],
+    "subPackages": [],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "usingComponents": {},
+    "tabBar": {
+        "color": "#707070",
+        "selectedColor": "#F26B3A",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "主页",
+                "iconPath": "static/tabber/homeitem.png",
+                "selectedIconPath": "static/tabber/homeselected.png"
+            },
+            {
+                "pagePath": "pages/classify/classify",
+                "text": "分类",
+                "iconPath": "static/tabber/classifyitem.png",
+                "selectedIconPath": "static/tabber/classifyitemselected.png"
+            },
+            {
+                "pagePath": "pages/collect/collect",
+                "text": "收藏",
+                "iconPath": "static/tabber/collectitem.png",
+                "selectedIconPath": "static/tabber/collectitemselected.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}
