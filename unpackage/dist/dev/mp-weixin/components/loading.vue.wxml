@@ -1,1 +1,1 @@
-<template name="21977594"><view class="_view M21977594 loading-box"><view class="_view M21977594 loading"><view class="_view M21977594 loading-item" wx:key="index" key="{{index}}" wx:for="{{3}}" wx:for-index="index" wx:for-item="item"></view></view></view></template>
+<template name="3bb1d0ce"><view class="_view M3bb1d0ce loading-box"><view class="_view M3bb1d0ce loading"><view class="_view M3bb1d0ce loading-item" wx:key="index" key="{{index}}" wx:for="{{3}}" wx:for-index="index" wx:for-item="item"></view></view></view></template>

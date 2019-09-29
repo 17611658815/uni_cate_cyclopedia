@@ -4,13 +4,13 @@
 		<view class='search_ctn' :style="'margin-top:'+height+'px'" @click.stop='delSelect()'>
 			<view class='search_input'>
 				<view class='search_input_cnt'>
-					<input type='text' @input="inputSearch" confirm-type="search" @focus="inputSearch" @confirm='gosearchMsg(inputVal)' :value='inputVal'
-					 placeholder='寻味美食 / 一触及达' placeholder-class='plhclass' />
+					<input type='text' @input="inputSearch" confirm-type="search" @focus="inputSearch" @confirm='gosearchMsg(inputVal)'
+					 :value='inputVal' placeholder='寻味美食 / 一触及达' placeholder-class='plhclass' />
 					<view @click='cancelBack'>取消</view>
 				</view>
 				<view class='selectContent'>
-					<view class='search_input_slect' v-for="(item,index) in searchResultDatas"  @click.stop='gosearchMsg(item)' :key='index'>
-							{{item}}
+					<view class='search_input_slect' v-for="(item,index) in searchResultDatas" @click.stop='gosearchMsg(item)' :key='index'>
+						{{item}}
 					</view>
 				</view>
 				<view class='search_type_title dp' v-if='history.length>0'>
@@ -52,7 +52,7 @@
 					title: '寻味美食',
 				},
 				isIphoneX: false,
-				searchResultDatas:[]
+				searchResultDatas: []
 			}
 		},
 		onLoad: function(options) {
@@ -62,7 +62,11 @@
 			that.history = wx.getStorageSync('searchRecord') || []; //若无储存则为空
 			that.hotSearchList()
 		},
-		comments:{
+		onHide: function() {
+				this.inputVal =  '',
+				this.searchResultDatas = []
+		},
+		comments: {
 			searchList
 		},
 		methods: {
@@ -74,7 +78,7 @@
 					param.weapp_src = 'xcf',
 					this.$Api.getHotListItem(param).then((res) => {
 						console.log(res)
-							this.hotList = res.data.content.keywords.slice(0, 20)
+						this.hotList = res.data.content.keywords.slice(0, 20)
 					})
 			},
 			//搜索下拉
@@ -84,7 +88,7 @@
 				param.is_weapp = 1,
 					param.weapp_src = 'xcf',
 					param.q = e.detail.value;
-					this.inputVal = e.detail.value
+				this.inputVal = e.detail.value
 				if (e.detail.value.length > 0) {
 					this.$Api.searchSelect(param).then((res) => {
 						console.log(res)
@@ -95,18 +99,18 @@
 								id: i
 							}
 						})
-							this.searchData = searchData.slice(0, 10);
-							this.searchResultDatas =  res.data.content.keywords
-							console.log(this.searchResultDatas)
+						this.searchData = searchData.slice(0, 10);
+						this.searchResultDatas = res.data.content.keywords
+						console.log(this.searchResultDatas)
 					})
 				} else if (e.detail.value == 0) { //如果val为空 清空列表
-						this.searchResultDatas = []
+					this.searchResultDatas = []
 				}
 
 			},
 			//清空下拉
 			delSelect() {
-					this.searchResultDatas = []
+				this.searchResultDatas = []
 			},
 			//跳转搜索详情
 			gosearchMsg(val) {
@@ -119,8 +123,8 @@
 			},
 			//取消搜索
 			cancelBack() {
-				this.inputVal =  '',
-				this.searchResultDatas = []
+				this.inputVal = '',
+					this.searchResultDatas = []
 				wx.navigateBack({
 					delta: 1
 				})
@@ -158,9 +162,7 @@
 							wx.removeStorage({
 								key: 'searchRecord',
 								success(res) {
-									that.setData({
-										history: []
-									})
+									that.history = []
 								}
 							})
 						} else if (res.cancel) {

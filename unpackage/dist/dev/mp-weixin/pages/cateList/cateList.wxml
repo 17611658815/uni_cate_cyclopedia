@@ -1,2 +1,2 @@
 <import src="./cateList.vue.wxml" />
-    <template is="6c253f9e" data="{{ ...$root['0'], $root }}"/>
+    <template is="3e44d8a4" data="{{ ...$root['0'], $root }}"/>
