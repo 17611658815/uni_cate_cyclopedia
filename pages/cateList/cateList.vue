@@ -5,25 +5,24 @@
 			<view class="cate_itle" :style="'position: fixed;left:0;top:'+height+'px'">
 				<view class='cate_itle_title'>{{query}}</view>
 			</view>
-			  <view class='cate_itle'></view>
+			<view class='cate_itle'></view>
 			<view class="cate_sot_options" :class="[scroTop > 100 ? 'cate_sot_options_none':'cate_sot_options_show']" :style="'position: fixed;top:'+height_2">
 				<view @click="switcherTab(0)" :class='[currentTab==0 ? "strong":"color"]'>综合</view>
 				<view @click="switcherTab(1)" :class='[currentTab==1 ? "strong":"color"]'>评分最高</view>
 				<view @click="switcherTab(2)" :class='[currentTab==2 ? "strong":"color"]' style="text-align: right;">做过最多</view>
 			</view>
-			  <view class='cate_sot_options'></view>
+			<view class='cate_sot_options'></view>
 			<scroll-view style='height:100%'>
 				<view class='cate_itemList' v-for="(item,index) in cateList" :key='index' @click='goDetaile(item.content.object.id)'>
 					<ad unit-id="adunit-e565947e04a88860" ad-type="video" v-if='index==1' ad-theme="white"></ad>
 					<image class='cate_itemList_image' mode="aspectFill" lazy-load='true' :src='item.content.object.photo640'></image>
 					<view class='cate_itemList_text'>
-						<view class='cate_itemList_text_1'>{{item.content.object.name}}<text v-if="item.content.object.score!=''"
-							 style="margin-left:20rpx;color:#F26B3A;font-weight:500">{{item.content.object.score}}分</text>
+						<view class='cate_itemList_text_1'>{{item.content.object.name}}<text v-if="item.content.object.score!=''" style="margin-left:20rpx;color:#F26B3A;font-weight:500">{{item.content.object.score}}分</text>
 						</view>
 						<view class='cate_itemList_text_2'>
 							<view class='cate_itemList_text_2_content'>
 								<text v-for="j in item.content.object.ingredient">{{j.name}}</text>
-								</view>
+							</view>
 						</view>
 					</view>
 				</view>
@@ -40,7 +39,7 @@
 		data() {
 			return {
 				height: "",
-				height_2:"",
+				height_2: "",
 				query: '',
 				offset: 0,
 				nvabarData: {
@@ -62,8 +61,15 @@
 			that.query = options.q
 			that.loadList()
 		},
+		onReachBottom: function() {
+			let that = this;
+			if (!that.off_on) {
+				that.offset = that.offset += 20
+				that.loadList()
+			}
+		},
 		onPageScroll(e) {
-				this.scroTop = e.scrollTop
+			this.scroTop = e.scrollTop
 		},
 		methods: {
 			switcherTab(current) {
@@ -94,10 +100,10 @@
 						that.off_on = true;
 					}
 					that.cateList = that.cateList,
-					that.off_on = that.off_on
+						that.off_on = that.off_on
 				})
 			},
-			
+
 			goDetaile(id) {
 				wx.navigateTo({
 					url: '../cateDetaile/cateDetaile?id=' + id,
