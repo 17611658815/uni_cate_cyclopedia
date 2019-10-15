@@ -63,8 +63,7 @@
 			that.hotSearchList()
 		},
 		onHide: function() {
-				this.inputVal =  '',
-				this.searchResultDatas = []
+				this.inputVal =  ''
 		},
 		comments: {
 			searchList

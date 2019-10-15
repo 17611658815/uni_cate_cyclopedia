@@ -124,15 +124,14 @@
 				}
 			})
 		},
-
 		onReachBottom() {
 			this.onscrollBotm()
 		},
 		onPageScroll: function(e) {
 			if (e.scrollTop > 500) {
-					this.isGoTop = true
+				this.isGoTop = true
 			} else {
-					this.isGoTop = false
+				this.isGoTop = false
 			}
 		},
 		methods: {
@@ -144,7 +143,7 @@
 				});
 				this.isGoTop = false
 			},
-			
+
 			onImageLoad: function(e) {
 				let imageId = e.currentTarget.id;
 				console.log(imageId)
