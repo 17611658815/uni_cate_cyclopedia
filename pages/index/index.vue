@@ -111,7 +111,6 @@
 			console.log(app.globalData)
 		},
 		onLoad() {
-
 			wx.getSystemInfo({
 				success: (res) => {
 					let ww = res.windowWidth,
@@ -184,10 +183,10 @@
 				let that = this,
 					images = [],
 					param = new Object();
-				param.offset = that.offset,
+				    param.offset = that.offset,
 					param.limit = that.limit,
 					param.is_weapp = that.is_weapp;
-				that.off_on = true;
+				    that.off_on = true;
 				this.$Api.getHomeList(param).then((res) => {
 					console.log(res)
 					if (res.data.content.recipes.length > 0) {
