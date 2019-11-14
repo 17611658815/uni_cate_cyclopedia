@@ -100,7 +100,7 @@
 						that.off_on = true;
 					}
 					that.cateList = that.cateList,
-						that.off_on = that.off_on
+					that.off_on = that.off_on
 				})
 			},
 

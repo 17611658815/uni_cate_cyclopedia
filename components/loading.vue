@@ -46,13 +46,14 @@
 		border-radius: 50%;
 		background: #F26B3A;
 		-webkit-animation: load 0.65s ease infinite;
+		animation: load 0.65s ease infinite;
 	}
 
 	.loading .loading-item:last-child {
 		margin-right: 0rpx;
 	}
 
-	@-webkit-keyframes load {
+	@keyframes load {
 		0% {
 			opacity: 1;
 		}
@@ -64,13 +65,16 @@
 
 	.loading .loading-item:nth-of-type(1) {
 		-webkit-animation-delay: 0.13s;
+		animation-delay: 0.13s;
 	}
 
 	.loading .loading-item:nth-of-type(2) {
 		-webkit-animation-delay: 0.26s;
+		animation-delay: 0.26s;
 	}
 
 	.loading .loading-item:nth-of-type(3) {
 		-webkit-animation-delay: 0.39s;
+		animation-delay: 0.39s;
 	}
 </style>

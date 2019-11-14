@@ -65,7 +65,7 @@
 				let that = this,
 					param = new Object();
 				param.is_weapp = 1,
-					param.weapp_src = 'xcf'
+				param.weapp_src = 'xcf'
 				app.loadingShow()
 				this.$Api.getclassList(param).then((res) => {
 					app.hideLoading()
