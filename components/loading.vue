@@ -25,7 +25,6 @@
 		padding: 20rpx 0;
 		align-items: center;
 		justify-content: center;
-		background: #ffffff;
 	}
 
 	.loading-box .loading-text {

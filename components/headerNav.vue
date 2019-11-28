@@ -1,6 +1,7 @@
 <template name="header-nav">
 	<view class='nav-wrap' :style="{height:height_20+'px'}">
-		<view class='nav-title' :style="'line-height:'+height_44+'px'">{{navbarData.title}}</view>
+		<view class='nav-title' :style="'line-height:'+height_44+'px'">
+	 <image class="loadingGif" src="../../static/icon/loading.gif" mode="" v-if='pullDown'></image>	{{navbarData.title}}</view>
 		<view style='display: flex; justify-content: space-around;flex-direction: column'>
 			<view class='nav-capsule' :style="{height:height_44+'px'}" v-if="navbarData.showCapsule">
 				<view  @click='_navback' v-if='!share'>
@@ -20,6 +21,9 @@
 	export default {
 		name: "header-nav",
 		 props:{
+			 pullDown:{
+				type:Boolean
+			 },
 		    navbarData:{
 		        type:Object
 		    }
@@ -123,5 +127,10 @@
 		width: 36rpx;
 		height: 36rpx;
 		margin-top: 8rpx;
+	}
+	.loadingGif{
+		width: 60rpx;
+		height: 60rpx;
+		vertical-align: middle;
 	}
 </style>

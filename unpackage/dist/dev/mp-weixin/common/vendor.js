@@ -6101,10 +6101,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
 var _App = _interopRequireDefault(__webpack_require__(/*! ../App.vue */ "../../../../../../work/食典/uni_cate_cyclopedia/App.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   name: "header-nav",
   props: {
+    pullDown: {
+      type: Boolean },
+
     navbarData: {
       type: Object } },
 
@@ -6197,7 +6201,15 @@ var render = function() {
           staticClass: "nav-title",
           style: "line-height:" + _vm.height_44 + "px"
         },
-        [_vm._v(_vm._s(_vm.navbarData.title))]
+        [
+          _vm.pullDown
+            ? _c("image", {
+                staticClass: "loadingGif",
+                attrs: { src: "../../static/icon/loading.gif", mode: "" }
+              })
+            : _vm._e(),
+          _vm._v(_vm._s(_vm.navbarData.title))
+        ]
       ),
       _c(
         "view",

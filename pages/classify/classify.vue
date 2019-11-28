@@ -17,9 +17,7 @@
 			</view>
 		</view>
 	</view>
-	</view>
 </template>
-
 <script>
 	import app from "../../App.vue"
 	export default {
@@ -65,7 +63,7 @@
 				let that = this,
 					param = new Object();
 				param.is_weapp = 1,
-				param.weapp_src = 'xcf'
+					param.weapp_src = 'xcf'
 				app.loadingShow()
 				this.$Api.getclassList(param).then((res) => {
 					app.hideLoading()
@@ -109,7 +107,6 @@
 		margin-right: 35rpx;
 		position: relative;
 		background-size: 100% 100%
-		
 	}
 
 	.clsaa_list_item_icon:nth-child(4n) {

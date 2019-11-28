@@ -1,8 +1,7 @@
 <template>
 	<view class="page">
-		<header-nav :navbar-data='nvabarData'></header-nav>
-		<view v-if='!pullDown' :style="{height:height+'px'}"></view>
-		<view v-else :style="{height:height+'px'}"></view>
+		<header-nav :navbar-data='nvabarData' :pullDown='pullDown'></header-nav>
+		<view :style="{height:height+'px'}"></view>
 		<scroll-view scroll-y="true" style="height:100%;">
 			<view style="width:100%;height:100%">
 				<view class='swipe-wrap'>
@@ -21,7 +20,7 @@
 					<image v-for='(item,index) in images' :key="index" :id="item.recipe.id" :src="item.recipe.photo" @load="onImageLoad"></image>
 				</view>
 				<view class='img_container'>
-					<ad unit-id="adunit-afbda2510cbf3487"></ad>
+					<ad @error='onError' unit-id="adunit-afbda2510cbf3487"></ad>
 					<view class="img_item">
 						<view v-for='(item,index) in col1' :key="index" class='img_item_box' @click="goDetaile(item.recipe.id)">
 							<image mode="widthFix" class='index_img_item' :src="item.recipe.photo" :style="{height:item.height+'px'}"></image>
@@ -54,7 +53,6 @@
 							</view>
 						</view>
 					</view>
-
 				</view>
 
 				<loading v-if='!off_on'></loading>
@@ -63,7 +61,7 @@
 			</view>
 		</scroll-view>
 		<!-- 返回顶部 -->
-		<view class="goTopBox" @click="goTop" v-if="isGoTop">
+		<view class="goTopBox animated" :class="isGoTop == true ? 'transform1':'transform2'" @click="goTop">
 			<image src="../../static/icon/goTop.png"></image>
 		</view>
 	</view>
@@ -74,6 +72,7 @@
 	import Vue from 'vue'
 	import app from "../../App.vue"
 	import title from "../../utils/title.js"
+	import "../../static/css/animate.css";
 	import headerNav from "../../components/headerNav.vue"
 	let col1H = 0;
 	let col2H = 0;
@@ -107,6 +106,23 @@
 				col2H: 0
 			}
 		},
+		onPullDownRefresh: function() {
+			var that = this;
+			that.pullDown = true,
+				wx.vibrateShort()
+			wx.showNavigationBarLoading() //在标题栏中显示加载
+
+			setTimeout(function() {
+				wx.hideNavigationBarLoading() //完成停止加载
+				wx.stopPullDownRefresh() //停止下拉刷新
+				that.pullDown = false,
+					that.images = [],
+					that.col1 = [],
+					that.col2 = []
+				that.loadImages()
+
+			}, 1500);
+		},
 		onShow() {
 			console.log(app.globalData)
 		},
@@ -129,18 +145,21 @@
 		onPageScroll: function(e) {
 			if (e.scrollTop > 500) {
 				this.isGoTop = true
-			} else {
+			} else if (e.scrollTop < 10) {
 				this.isGoTop = false
 			}
 		},
 		methods: {
 			// 点击置顶
 			goTop: function() {
+				// this.isGoTop = false;
 				wx.pageScrollTo({
 					scrollTop: 0,
 					duration: 300
 				});
-				this.isGoTop = false
+			},
+			onError(e) {
+				console.log(e, 145)
 			},
 
 			onImageLoad: function(e) {
@@ -183,10 +202,10 @@
 				let that = this,
 					images = [],
 					param = new Object();
-				    param.offset = that.offset,
+				param.offset = that.offset,
 					param.limit = that.limit,
 					param.is_weapp = that.is_weapp;
-				    that.off_on = true;
+				that.off_on = true;
 				this.$Api.getHomeList(param).then((res) => {
 					console.log(res)
 					if (res.data.content.recipes.length > 0) {
@@ -244,7 +263,6 @@
 		position: relative;
 		padding-bottom: 40rpx;
 		box-sizing: border-box;
-		background: #f8f8f8;
 	}
 
 	.orientation_region {
@@ -292,7 +310,7 @@
 
 	.index-slogan {
 		width: 100%;
-		background: #ffffff;
+		/* background: #ffffff; */
 		padding: 30rpx 0 20rpx 0;
 		font-size: 25rpx;
 		text-align: center;
@@ -304,7 +322,7 @@
 		margin: 2%;
 		display: inline-block;
 		vertical-align: top;
-		background: #ffffff;
+		/* background: #ffffff; */
 	}
 
 	.index_img_item {
@@ -448,5 +466,22 @@
 		color: #000000;
 		background: #ffffff;
 		z-index: 99999;
+	}
+
+	.transform1 {
+		transition: 0.6s;
+		transform: translateX(0);
+		/**左移元素**/
+	}
+
+	.transform2 {
+		transition: 0.6s;
+		transform: translateX(80px);
+		/**左移元素**/
+	}
+	.headerLoadBox{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 </style>

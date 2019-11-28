@@ -105,6 +105,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../../../../../../work/食典/uni_cate_cyclopedia/static/css/animate.css":
+/*!*************************************************************!*\
+  !*** D:/work/食典/uni_cate_cyclopedia/static/css/animate.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js":
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
@@ -1401,11 +1412,10 @@ uni$1;exports.default = _default;
 
 
 
-
-
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue/index.js"));
 var _App = _interopRequireDefault(__webpack_require__(/*! ../../App.vue */ "../../../../../../work/食典/uni_cate_cyclopedia/App.vue"));
 var _title = _interopRequireDefault(__webpack_require__(/*! ../../utils/title.js */ "../../../../../../work/食典/uni_cate_cyclopedia/utils/title.js"));
+__webpack_require__(/*! ../../static/css/animate.css */ "../../../../../../work/食典/uni_cate_cyclopedia/static/css/animate.css");
 var _headerNav = _interopRequireDefault(__webpack_require__(/*! ../../components/headerNav.vue */ "../../../../../../work/食典/uni_cate_cyclopedia/components/headerNav.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 var col1H = 0;
 var col2H = 0;var _default =
@@ -1439,11 +1449,27 @@ var col2H = 0;var _default =
       col2H: 0 };
 
   },
+  onPullDownRefresh: function onPullDownRefresh() {
+    var that = this;
+    that.pullDown = true,
+    wx.vibrateShort();
+    wx.showNavigationBarLoading(); //在标题栏中显示加载
+
+    setTimeout(function () {
+      wx.hideNavigationBarLoading(); //完成停止加载
+      wx.stopPullDownRefresh(); //停止下拉刷新
+      that.pullDown = false,
+      that.images = [],
+      that.col1 = [],
+      that.col2 = [];
+      that.loadImages();
+
+    }, 1500);
+  },
   onShow: function onShow() {
     console.log(_App.default.globalData);
   },
   onLoad: function onLoad() {var _this = this;
-
     wx.getSystemInfo({
       success: function success(res) {
         var ww = res.windowWidth,
@@ -1462,18 +1488,21 @@ var col2H = 0;var _default =
   onPageScroll: function onPageScroll(e) {
     if (e.scrollTop > 500) {
       this.isGoTop = true;
-    } else {
+    } else if (e.scrollTop < 10) {
       this.isGoTop = false;
     }
   },
   methods: {
     // 点击置顶
     goTop: function goTop() {
+      // this.isGoTop = false;
       wx.pageScrollTo({
         scrollTop: 0,
         duration: 300 });
 
-      this.isGoTop = false;
+    },
+    onError: function onError(e) {
+      console.log(e, 145);
     },
 
     onImageLoad: function onImageLoad(e) {
@@ -1598,11 +1627,13 @@ var render = function() {
     { staticClass: "page" },
     [
       _c("header-nav", {
-        attrs: { "navbar-data": _vm.nvabarData, mpcomid: "306aa874-0" }
+        attrs: {
+          "navbar-data": _vm.nvabarData,
+          pullDown: _vm.pullDown,
+          mpcomid: "306aa874-0"
+        }
       }),
-      !_vm.pullDown
-        ? _c("view", { style: { height: _vm.height + "px" } })
-        : _c("view", { style: { height: _vm.height + "px" } }),
+      _c("view", { style: { height: _vm.height + "px" } }),
       _c(
         "scroll-view",
         { staticStyle: { height: "100%" }, attrs: { "scroll-y": "true" } },
@@ -1654,8 +1685,10 @@ var render = function() {
                   _c("ad", {
                     attrs: {
                       "unit-id": "adunit-afbda2510cbf3487",
+                      eventid: "306aa874-1",
                       mpcomid: "306aa874-1"
-                    }
+                    },
+                    on: { error: _vm.onError }
                   }),
                   _c(
                     "view",
@@ -1666,7 +1699,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass: "img_item_box",
-                          attrs: { eventid: "306aa874-1-" + index },
+                          attrs: { eventid: "306aa874-2-" + index },
                           on: {
                             click: function($event) {
                               _vm.goDetaile(item.recipe.id)
@@ -1734,7 +1767,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass: "img_item_box",
-                          attrs: { eventid: "306aa874-2-" + index },
+                          attrs: { eventid: "306aa874-3-" + index },
                           on: {
                             click: function($event) {
                               _vm.goDetaile(item.recipe.id)
@@ -1809,17 +1842,16 @@ var render = function() {
           )
         ]
       ),
-      _vm.isGoTop
-        ? _c(
-            "view",
-            {
-              staticClass: "goTopBox",
-              attrs: { eventid: "306aa874-3" },
-              on: { click: _vm.goTop }
-            },
-            [_c("image", { attrs: { src: "../../static/icon/goTop.png" } })]
-          )
-        : _vm._e()
+      _c(
+        "view",
+        {
+          staticClass: "goTopBox animated",
+          class: _vm.isGoTop == true ? "transform1" : "transform2",
+          attrs: { eventid: "306aa874-4" },
+          on: { click: _vm.goTop }
+        },
+        [_c("image", { attrs: { src: "../../static/icon/goTop.png" } })]
+      )
     ],
     1
   )

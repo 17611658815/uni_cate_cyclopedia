@@ -173,4 +173,9 @@ button::after {
 	height: 36rpx;
 	margin-top: 8rpx;
 }
+.loadingGif{
+	width: 60rpx;
+	height: 60rpx;
+	vertical-align: middle;
+}
 

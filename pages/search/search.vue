@@ -4,8 +4,14 @@
 		<view class='search_ctn' :style="'margin-top:'+height+'px'" @click.stop='delSelect()'>
 			<view class='search_input'>
 				<view class='search_input_cnt'>
-					<input type='text' @input="inputSearch" confirm-type="search" @focus="inputSearch" @confirm='gosearchMsg(inputVal)'
-					 :value='inputVal' placeholder='寻味美食 / 一触及达' placeholder-class='plhclass' />
+					<input type='text' 
+						@input="inputSearch" 
+						confirm-type="search" 
+						@focus="inputSearch" 
+						@confirm='gosearchMsg(inputVal)'
+						 :value='inputVal' 
+						 placeholder='寻味美食 / 一触及达' 
+						 placeholder-class='plhclass' />
 					<view @click='cancelBack'>取消</view>
 				</view>
 				<view class='selectContent'>
@@ -32,7 +38,6 @@
 					<ad unit-id="adunit-92a612528aa85dc1" ad-type="video" ad-theme="white"></ad>
 				</view>
 			</view>
-
 		</view>
 	</view>
 </template>
@@ -63,7 +68,7 @@
 			that.hotSearchList()
 		},
 		onHide: function() {
-				this.inputVal =  ''
+			this.inputVal =  ''
 		},
 		comments: {
 			searchList
@@ -74,17 +79,17 @@
 				let that = this,
 					param = new Object();
 				param.is_weapp = 1,
-					param.weapp_src = 'xcf',
-					this.$Api.getHotListItem(param).then((res) => {
-						console.log(res)
-						this.hotList = res.data.content.keywords.slice(0, 20)
-					})
+				param.weapp_src = 'xcf',
+				this.$Api.getHotListItem(param).then((res) => {
+					console.log(res)
+					this.hotList = res.data.content.keywords.slice(0, 20)
+				})
 			},
 			//搜索下拉
 			inputSearch(e) {
 				let that = this,
 					param = new Object();
-				param.is_weapp = 1,
+					param.is_weapp = 1,
 					param.weapp_src = 'xcf',
 					param.q = e.detail.value;
 				this.inputVal = e.detail.value

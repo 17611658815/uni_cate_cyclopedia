@@ -22,7 +22,6 @@
 						<view>{{j.name}}</view>
 						<view>{{j.amount}}</view>
 					</view>
-
 					<view class='cate_fmt_step' v-for='(k,index) in detaileObj.instruction' :key="k">
 						<view class='cate_fmt_step_txt'>
 							步骤{{index+1}}
@@ -32,7 +31,6 @@
 					</view>
 				</view>
 			</view>
-
 		</view>
 
 		<view class='collectBox' @click='addCollect'>

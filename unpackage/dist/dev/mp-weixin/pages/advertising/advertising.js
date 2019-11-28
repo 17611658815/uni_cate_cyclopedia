@@ -181,7 +181,6 @@ var _images = _interopRequireDefault(__webpack_require__(/*! ../../utils/images.
 
     } },
 
-
   onShow: function onShow() {
     this.imagePath = _images.default[Math.floor(Math.random() * _images.default.length)],
     this.title = _title.default[Math.floor(Math.random() * _title.default.length)];

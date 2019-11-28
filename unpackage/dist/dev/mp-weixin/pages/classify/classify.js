@@ -134,8 +134,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
-
 var _App = _interopRequireDefault(__webpack_require__(/*! ../../App.vue */ "../../../../../../work/食典/uni_cate_cyclopedia/App.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   data: function data() {

@@ -188,6 +188,7 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ../../App.vue */ "../.
   },
   methods: {
     switcherTab: function switcherTab(current) {
+      console.log(current);
       var that = this;
       _App.default.loadingShow();
       that.cateList = [];

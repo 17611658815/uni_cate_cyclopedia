@@ -73,6 +73,7 @@
 		},
 		methods: {
 			switcherTab(current) {
+				console.log(current)
 				let that = this;
 				app.loadingShow()
 				that.cateList = [];

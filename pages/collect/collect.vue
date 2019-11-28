@@ -21,7 +21,7 @@
 </template>
 
 <script>
-	import app from "../../App.vue"
+	import app from "../../App.vue";
 	export default {
 		data() {
 			return {
@@ -51,7 +51,7 @@
 						if (res.confirm) {
 							that.CollectList.splice(index, 1);
 							wx.setStorageSync("CollectList", that.CollectList);
-							that.onShow()
+							that.onShow();
 						} else if (res.cancel) {
 							console.log('用户点击取消')
 						}

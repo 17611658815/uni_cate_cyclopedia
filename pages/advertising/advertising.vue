@@ -53,10 +53,9 @@
 				})
 			},
 		},
-
 		onShow() {
 			this.imagePath = images[Math.floor(Math.random() * images.length)],
-				this.title = title[Math.floor(Math.random() * title.length)]
+			this.title = title[Math.floor(Math.random() * title.length)]
 		},
 	}
 </script>
@@ -103,7 +102,6 @@
 		right: 25rpx;
 		bottom: 25rpx;
 		border-radius: 6rpx;
-
 	}
 
 	button {
