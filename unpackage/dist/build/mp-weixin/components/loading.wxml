@@ -1,0 +1,1 @@
+<view class="loading-box"><view class="loading"><block wx:for="{{3}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="loading-item"></view></block></view></view>

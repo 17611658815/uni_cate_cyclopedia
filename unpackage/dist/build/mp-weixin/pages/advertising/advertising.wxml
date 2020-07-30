@@ -1,2 +1,1 @@
-<import src="./advertising.vue.wxml" />
-    <template is="c7369550" data="{{ ...$root['0'], $root }}"/>
+<view class="page"><view class="main"><view class="adv1"><image class="adv-img" mode="scaleToFill" src="{{imagePath}}"></image><text data-event-opts="{{[['tap',[['cliadv']]]]}}" class="tiaoguo" bindtap="__e">{{"跳过 "+miao}}</text></view><view class="adv2"><button>食典录</button><text class="text2">{{title}}</text></view></view></view>

@@ -41,9 +41,9 @@ export const Api = {
         return Promise.get(Url.hotSearchUrl(paramObj), paramObj);
     },
     /**
-     * 搜索详情
+     * 搜索详情s
      */
     searchDetaile: function (paramObj) {
-        return Promise.get(Url.searchDetaileUrl(paramObj), paramObj);
+        return Promise.post(Url.searchDetaileUrl(paramObj), paramObj);
     },
 }

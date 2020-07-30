@@ -20,7 +20,7 @@
 					<image v-for='(item,index) in images' :key="index" :id="item.recipe.id" :src="item.recipe.photo" @load="onImageLoad"></image>
 				</view>
 				<view class='img_container'>
-					<ad @error='onError' unit-id="adunit-afbda2510cbf3487"></ad>
+					<ad unit-id="adunit-5303aec78cea5c4d" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad>
 					<view class="img_item">
 						<view v-for='(item,index) in col1' :key="index" class='img_item_box' @click="goDetaile(item.recipe.id)">
 							<image mode="widthFix" class='index_img_item' :src="item.recipe.photo" :style="{height:item.height+'px'}"></image>

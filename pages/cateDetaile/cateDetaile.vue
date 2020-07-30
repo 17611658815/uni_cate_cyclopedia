@@ -153,6 +153,13 @@
 			that.loadList();
 			// that.getSysdata();
 		},
+		onShareAppMessage: function() {
+			var that = this;
+			return {
+				title: detaileObj.name,
+				path: '/pages/cateDetaile/cateDetaile',
+			}
+		}
 	}
 </script>
 

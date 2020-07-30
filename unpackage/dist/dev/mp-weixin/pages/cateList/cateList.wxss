@@ -1,3 +1,111 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+.container {
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	box-sizing: border-box;
+	background: #f8f8f8;
+}
+button::after {
+	border: none;
+}
+.reach_bottom {
+	text-align: center;
+	line-height: 80rpx;
+	font-size: 24rpx;
+	color: #626262;
+	background: #ffffff;
+}
+
 @charset "UTF-8";
 
 /*!
@@ -69,7 +177,6 @@ from,
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-transform-origin: center bottom;
-      -ms-transform-origin: center bottom;
           transform-origin: center bottom;
 }
 @-webkit-keyframes flash {
@@ -348,7 +455,6 @@ to {
 }
 .swing {
   -webkit-transform-origin: top center;
-      -ms-transform-origin: top center;
           transform-origin: top center;
   -webkit-animation-name: swing;
           animation-name: swing;
@@ -553,7 +659,6 @@ from,
   -webkit-animation-name: jello;
           animation-name: jello;
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
           transform-origin: center;
 }
 @-webkit-keyframes heartBeat {
@@ -3059,7 +3164,6 @@ to {
     -webkit-animation: unset !important;
             animation: unset !important;
     -webkit-transition: none !important;
-    -o-transition: none !important;
     transition: none !important;
 }
 }
@@ -3088,29 +3192,23 @@ to {
 }
 .cate_itemList_image {
 	width: 100%;
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 }
 .cate_itemList_text {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
-	    -ms-flex: 1;
 	        flex: 1;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
 	        flex-direction: column;
 	-webkit-align-content: center;
-	    -ms-flex-line-pack: center;
 	        align-content: center;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
 .cate_itemList_text_1 {
@@ -3123,26 +3221,21 @@ to {
 	font-size: 25rpx;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
 	        align-items: center;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	margin-top: 10rpx;
 }
 .cate_itemList_text_2_content {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
-	    -ms-flex: 1;
 	        flex: 1;
 	overflow: hidden;
-	-o-text-overflow: ellipsis;
-	   text-overflow: ellipsis;
+	text-overflow: ellipsis;
 	white-space: nowrap;
 	color: #707070;
 }
@@ -3153,16 +3246,13 @@ to {
 	width: 90%;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	height: 50rpx;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
 	        align-items: center;
 	padding: 0 0 10rpx 0;
 	background: #FFFFFF;
@@ -3174,20 +3264,17 @@ to {
 	opacity: 6;
 	visibility: visible;
 	-webkit-transition: all .5s linear;
-	-o-transition: all .5s linear;
 	transition: all .5s linear;
 }
 .cate_sot_options_none {
 	opacity: 0;
 	visibility: hidden;
 	-webkit-transition: all .5s linear;
-	-o-transition: all .5s linear;
 	transition: all .5s linear;
 }
 .cate_sot_options view {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
-	    -ms-flex: 1;
 	        flex: 1;
 	font-size: 25rpx;
 }

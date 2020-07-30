@@ -1,15 +1,15 @@
 <template name="header-nav">
 	<view class='nav-wrap' :style="{height:height_20+'px'}">
 		<view class='nav-title' :style="'line-height:'+height_44+'px'">
-	 <image class="loadingGif" src="../../static/icon/loading.gif" mode="" v-if='pullDown'></image>	{{navbarData.title}}</view>
+	 <image class="loadingGif" src="../static/icon/loading.gif" mode="" v-if='pullDown'></image>	{{navbarData.title}}</view>
 		<view style='display: flex; justify-content: space-around;flex-direction: column'>
 			<view class='nav-capsule' :style="{height:height_44+'px'}" v-if="navbarData.showCapsule">
 				<view  @click='_navback' v-if='!share'>
-					<image src='../../static/icon/icon_left.png' mode='aspectFill' class='back-home'></image>
+					<image src='../static/icon/icon_left.png' mode='aspectFill' class='back-home'></image>
 				</view>
 				<view class='navbar-v-line' v-if='!share'></view>
 				<view @click='_backhome'>
-					<image src='../../static/icon/icon_hoem.png' mode='aspectFill' class='back-pre'></image>
+					<image src='../static/icon/icon_hoem.png' mode='aspectFill' class='back-pre'></image>
 				</view>
 			</view>
 		</view>

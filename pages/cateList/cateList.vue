@@ -13,7 +13,10 @@
 			</view>
 			<view class='cate_sot_options'></view>
 			<scroll-view style='height:100%'>
-				<view class='cate_itemList' v-for="(item,index) in cateList" :key='index' @click='goDetaile(item.content.object.id)'>
+				<view class='cate_itemList' v-for="(item,index) in cateList" 
+				:key='index' 
+				@click='goDetaile(item.content.object.id)'
+				v-if="item.content.object.score">
 					<ad unit-id="adunit-e565947e04a88860" ad-type="video" v-if='index==1' ad-theme="white"></ad>
 					<image class='cate_itemList_image' mode="aspectFill" lazy-load='true' :src='item.content.object.photo640'></image>
 					<view class='cate_itemList_text'>
@@ -84,11 +87,11 @@
 			},
 			loadList() {
 				let that = this,
-					param = new Object();
+				param = new Object();
 				param.is_weapp = 1;
+				param.size = 20
 				param.weapp_src = 'xcf';
 				param.q = that.query;
-				param.offset = that.offset;
 				param.order_by = that.contType[that.currentTab]
 				this.$Api.searchDetaile(param).then((res) => {
 					app.hideLoading()
