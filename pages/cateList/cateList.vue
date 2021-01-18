@@ -15,8 +15,8 @@
 			<scroll-view style='height:100%'>
 				<view class='cate_itemList' v-for="(item,index) in cateList" 
 				:key='index' 
-				@click='goDetaile(item.content.object.id)'
-				v-if="item.content.object.score">
+				v-if="item.style!='equipment_binding_tips_item' && item.style!='search_artical_ad_collection'"
+				@click='goDetaile(item.content.object.id)'>
 					<ad unit-id="adunit-e565947e04a88860" ad-type="video" v-if='index==1' ad-theme="white"></ad>
 					<image class='cate_itemList_image' mode="aspectFill" lazy-load='true' :src='item.content.object.photo640'></image>
 					<view class='cate_itemList_text'>
@@ -29,8 +29,11 @@
 						</view>
 					</view>
 				</view>
-				<loading v-if='!off_on'></loading>
+				<loading v-if='loading'></loading>
 				<view class='reach_bottom' v-if='off_on && offset>0'>我是有底线的</view>
+				<view class="goTopBox animated" :class="isGoTop == true ? 'transform1':'transform2'" @click="goTop">
+					<image src="../../static/icon/goTop.png"></image>
+				</view>
 			</scroll-view>
 		</view>
 	</view>
@@ -55,6 +58,9 @@
 				off_on: false,
 				contType: ['', '-score', '-n_dishes'],
 				scroTop: 0,
+				cursor:"",
+				loading:false,
+				isGoTop: false,
 			}
 		},
 		onLoad: function(options) {
@@ -64,6 +70,15 @@
 			that.query = options.q
 			that.loadList()
 		},
+
+		onPageScroll: function(e) {
+			if (e.scrollTop > 500) {
+				this.isGoTop = true
+			} else if (e.scrollTop < 10) {
+				this.isGoTop = false
+			}
+			this.scroTop = e.scrollTop
+		},
 		onReachBottom: function() {
 			let that = this;
 			if (!that.off_on) {
@@ -71,14 +86,19 @@
 				that.loadList()
 			}
 		},
-		onPageScroll(e) {
-			this.scroTop = e.scrollTop
-		},
 		methods: {
+			// 点击置顶
+			goTop: function() {
+				// this.isGoTop = false;
+				wx.pageScrollTo({
+					scrollTop: 0,
+					duration: 300
+				});
+			},
 			switcherTab(current) {
 				console.log(current)
 				let that = this;
-				app.loadingShow()
+				// app.loadingShow()
 				that.cateList = [];
 				that.offset = 0;
 				that.currentTab = current
@@ -89,22 +109,23 @@
 				let that = this,
 				param = new Object();
 				param.is_weapp = 1;
-				param.size = 20
+				param.size = 10
 				param.weapp_src = 'xcf';
 				param.q = that.query;
+				param.cursor = that.cursor;
 				param.order_by = that.contType[that.currentTab]
+				that.loading = true
 				this.$Api.searchDetaile(param).then((res) => {
-					app.hideLoading()
-					if (res.data.content.content.length > 0) {
-						res.data.content.content.forEach(val => {
-							that.cateList.push(val)
-							that.off_on = false;
-						})
+					that.loading = false
+					that.cursor = res.data.content.cursor.next
+					if (res.data.content.cursor.has_next) {
+						console.log(res.data,104)
+						that.cateList = that.cateList.concat(res.data.content.content)
+						// that.cateList = that.cateList.concat(that.cateList,res.data.content.content)
+						console.log(that.cateList,100)
 					} else {
 						that.off_on = true;
 					}
-					that.cateList = that.cateList,
-					that.off_on = that.off_on
 				})
 			},
 
@@ -227,5 +248,34 @@
 
 	.color {
 		color: #707070;
+	}
+	/* 返回顶部 */
+	.goTopBox {
+		width: 80rpx;
+		height: 80rpx;
+		background: #F26B3A;
+		position: fixed;
+		bottom: 30rpx;
+		right: 30rpx;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.goTopBox image {
+		width: 40rpx;
+		height: 40rpx;
+	}
+	.transform1 {
+		transition: 0.6s;
+		transform: translateX(0);
+		/**左移元素**/
+	}
+	
+	.transform2 {
+		transition: 0.6s;
+		transform: translateX(80px);
+		/**左移元素**/
 	}
 </style>

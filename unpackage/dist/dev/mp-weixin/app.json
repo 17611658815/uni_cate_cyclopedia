@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/advertising/advertising",
     "pages/index/index",
     "pages/cateDetaile/cateDetaile",
     "pages/collect/collect",
@@ -43,5 +42,5 @@
     "header-nav": "/components/headerNav",
     "loading": "/components/loading"
   },
-  "sitemapLocation": "sitemap60.json"
+  "sitemapLocation": "sitemap38.json"
 }

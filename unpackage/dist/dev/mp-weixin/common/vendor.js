@@ -1,6 +1,6 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
-
-/***/ 1:
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
+/* 0 */,
+/* 1 */
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -366,6 +366,38 @@ var baseApi = /*#__PURE__*/Object.freeze({
   interceptors: interceptors });
 
 
+function findExistsPageIndex(url) {
+  var pages = getCurrentPages();
+  var len = pages.length;
+  while (len--) {
+    var page = pages[len];
+    if (page.$page && page.$page.fullPath === url) {
+      return len;
+    }
+  }
+  return -1;
+}
+
+var redirectTo = {
+  name: function name(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.delta) {
+      return 'navigateBack';
+    }
+    return 'redirectTo';
+  },
+  args: function args(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.url) {
+      var existsPageIndex = findExistsPageIndex(fromArgs.url);
+      if (existsPageIndex !== -1) {
+        var delta = getCurrentPages().length - 1 - existsPageIndex;
+        if (delta > 0) {
+          fromArgs.delta = delta;
+        }
+      }
+    }
+  } };
+
+
 var previewImage = {
   args: function args(fromArgs) {
     var currentIndex = parseInt(fromArgs.current);
@@ -400,6 +432,8 @@ var previewImage = {
   } };
 
 
+// import navigateTo from 'uni-helpers/navigate-to'
+
 function addSafeAreaInsets(result) {
   if (result.safeArea) {
     var safeArea = result.safeArea;
@@ -412,6 +446,8 @@ function addSafeAreaInsets(result) {
   }
 }
 var protocols = {
+  redirectTo: redirectTo,
+  // navigateTo,  // 由于在微信开发者工具的页面参数，会显示__id__参数，因此暂时关闭mp-weixin对于navigateTo的AOP
   previewImage: previewImage,
   getSystemInfo: {
     returnValue: addSafeAreaInsets },
@@ -499,7 +535,12 @@ function wrapper(methodName, method) {
       if (typeof arg2 !== 'undefined') {
         args.push(arg2);
       }
-      var returnValue = wx[options.name || methodName].apply(wx, args);
+      if (isFn(options.name)) {
+        methodName = options.name(arg1);
+      } else if (isStr(options.name)) {
+        methodName = options.name;
+      }
+      var returnValue = wx[methodName].apply(wx, args);
       if (isSyncApi(methodName)) {// 同步 api
         return processReturnValue(methodName, returnValue, options.returnValue, isContextApi(methodName));
       }
@@ -760,7 +801,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"食典录","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -861,6 +902,11 @@ function initProperties(props) {var isBehavior = arguments.length > 1 && argumen
     properties.vueId = {
       type: String,
       value: '' };
+
+    // 用于字节跳动小程序模拟抽象节点
+    properties.generic = {
+      type: Object,
+      value: null };
 
     properties.vueSlots = { // 小程序不能直接定义 $slots 的 props，所以通过 vueSlots 转换到 $slots
       type: null,
@@ -1160,14 +1206,17 @@ function handleEvent(event) {var _this = this;
             }
             handler.once = true;
           }
-          ret.push(handler.apply(handlerCtx, processEventArgs(
+          var params = processEventArgs(
           _this.$vm,
           event,
           eventArray[1],
           eventArray[2],
           isCustom,
-          methodName)));
+          methodName);
 
+          // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
+          // eslint-disable-next-line no-sparse-arrays
+          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
         }
       });
     }
@@ -1302,16 +1351,28 @@ function initRelation(detail) {
   this.triggerEvent('__l', detail);
 }
 
+function selectAllComponents(mpInstance, selector, $refs) {
+  var components = mpInstance.selectAllComponents(selector);
+  components.forEach(function (component) {
+    var ref = component.dataset.ref;
+    $refs[ref] = component.$vm || component;
+    {
+      if (component.dataset.vueGeneric === 'scoped') {
+        component.selectAllComponents('.scoped-ref').forEach(function (scopedComponent) {
+          selectAllComponents(scopedComponent, selector, $refs);
+        });
+      }
+    }
+  });
+}
+
 function initRefs(vm) {
   var mpInstance = vm.$scope;
   Object.defineProperty(vm, '$refs', {
     get: function get() {
       var $refs = {};
-      var components = mpInstance.selectAllComponents('.vue-ref');
-      components.forEach(function (component) {
-        var ref = component.dataset.ref;
-        $refs[ref] = component.$vm || component;
-      });
+      selectAllComponents(mpInstance, '.vue-ref', $refs);
+      // TODO 暂不考虑 for 中的 scoped
       var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
       forComponents.forEach(function (component) {
         var ref = component.dataset.ref;
@@ -1351,9 +1412,79 @@ function parseApp(vm) {
 
 }
 
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
 function createApp(vm) {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    // 微信小程序使用自身getOpenerEventChannel
+    {
+      return this.$scope.getOpenerEventChannel();
+    }
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
   App(parseApp(vm));
   return vm;
+}
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function encodeReserveReplacer(c) {return '%' + c.charCodeAt(0).toString(16);};
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function encode(str) {return encodeURIComponent(str).
+  replace(encodeReserveRE, encodeReserveReplacer).
+  replace(commaRE, ',');};
+
+function stringifyQuery(obj) {var encodeStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : encode;
+  var res = obj ? Object.keys(obj).map(function (key) {
+    var val = obj[key];
+
+    if (val === undefined) {
+      return '';
+    }
+
+    if (val === null) {
+      return encodeStr(key);
+    }
+
+    if (Array.isArray(val)) {
+      var result = [];
+      val.forEach(function (val2) {
+        if (val2 === undefined) {
+          return;
+        }
+        if (val2 === null) {
+          result.push(encodeStr(key));
+        } else {
+          result.push(encodeStr(key) + '=' + encodeStr(val2));
+        }
+      });
+      return result.join('&');
+    }
+
+    return encodeStr(key) + '=' + encodeStr(val);
+  }).filter(function (x) {return x.length > 0;}).join('&') : null;
+  return res ? "?".concat(res) : '';
 }
 
 function parseBaseComponent(vueComponentOptions)
@@ -1478,9 +1609,15 @@ function parseBasePage(vuePageOptions, _ref6)
 
   initHooks(pageOptions.methods, hooks$1, vuePageOptions);
 
-  pageOptions.methods.onLoad = function (args) {
-    this.$vm.$mp.query = args; // 兼容 mpvue
-    this.$vm.__call_hook('onLoad', args);
+  pageOptions.methods.onLoad = function (query) {
+    this.options = query;
+    var copyQuery = Object.assign({}, query);
+    delete copyQuery.__id__;
+    this.$page = {
+      fullPath: '/' + (this.route || this.is) + stringifyQuery(copyQuery) };
+
+    this.$vm.$mp.query = query; // 兼容 mpvue
+    this.$vm.__call_hook('onLoad', query);
   };
 
   return pageOptions;
@@ -1590,309 +1727,7 @@ var uni$1 = uni;var _default =
 uni$1;exports.default = _default;
 
 /***/ }),
-
-/***/ 10:
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 104:
-/*!**************************************************************************!*\
-  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/API/HttpRequest.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
-/**
-                                                                                                      * 封装post方法
-                                                                                                      * @param url
-                                                                                                      * @param data
-                                                                                                      * @returns {Promise}
-                                                                                                      */
-function post(url, data) {
-  var promise = new Promise(function (resolve, reject) {
-    wx.request({
-      url: url,
-      data: data,
-      method: 'POST',
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' },
-
-      success: function success(res) {
-        if (res.statusCode == 200) {
-          resolve(res);
-        } else {
-          reject(res.data);
-        }
-      },
-      fail: function fail() {
-        utils.showTost('网络错误');
-      } });
-
-  });
-  return promise;
-}
-/**
-   * 封装get方法
-   * @param url
-   * @param data
-   * @returns {Promise}
-   */
-function get(url, data) {
-  var promise = new Promise(function (resolve, reject) {
-    wx.request({
-      url: url,
-      data: data,
-      header: {
-        'content-type': 'application/json' },
-
-      success: function success(res) {
-        if (res.statusCode == 200) {
-          resolve(res);
-        } else {
-          reject(res.data);
-        }
-      },
-      fail: function fail(e) {
-        utils.showTost('网络错误');
-      } });
-
-  });
-  return promise;
-}var _default =
-
-{
-  get: get,
-  post: post };exports.default = _default;
-
-/***/ }),
-
-/***/ 11:
-/*!******************************************************************!*\
-  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/API/API.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.Api = void 0;var _HttpRequest = _interopRequireDefault(__webpack_require__(/*! ./HttpRequest.js */ 104));
-var _Url = _interopRequireDefault(__webpack_require__(/*! ./Url.js */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-/**
-                                                                                                                                                      * 接口请求
-                                                                                                                                                      */
-var Api = {
-  /**
-             * @param paramObj
-             * @returns {Promise}
-             */
-
-  /**
-                 * 热门菜谱
-                 */
-  getHomeList: function getHomeList(paramObj) {
-    return _HttpRequest.default.get(_Url.default.getHomeListUrl(paramObj), paramObj);
-  },
-  /**
-      * 菜谱分类
-      */
-  getclassList: function getclassList(paramObj) {
-    return _HttpRequest.default.get(_Url.default.classitemUrl(paramObj), paramObj);
-  },
-  /**
-      * 菜谱详情
-      */
-  getCatedetaile: function getCatedetaile(paramObj) {
-    return _HttpRequest.default.get(_Url.default.detailsUrl(paramObj), paramObj);
-  },
-  /**
-      * 搜索联想
-      */
-  searchSelect: function searchSelect(paramObj) {
-    return _HttpRequest.default.get(_Url.default.searchSelectUrl(paramObj), paramObj);
-  },
-  /**
-      * 热门搜索
-      */
-  getHotListItem: function getHotListItem(paramObj) {
-    return _HttpRequest.default.get(_Url.default.hotSearchUrl(paramObj), paramObj);
-  },
-  /**
-      * 搜索详情s
-      */
-  searchDetaile: function searchDetaile(paramObj) {
-    return _HttpRequest.default.post(_Url.default.searchDetaileUrl(paramObj), paramObj);
-  } };exports.Api = Api;
-
-/***/ }),
-
-/***/ 13:
-/*!******************************************************************!*\
-  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/API/Url.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Url = /*#__PURE__*/function () {function Url() {_classCallCheck(this, Url);}_createClass(Url, null, [{ key: "getHomeListUrl",
-
-
-    //主页热门
-    value: function getHomeListUrl(data) {
-      return this.PATH + '/recipes/popular_v3.json?weapp_src=xcf&is_weapp=1&limit=' + data.limit + '&offset=' + data.offset;
-    } }, { key: "classitemUrl",
-    //分类
-    value: function classitemUrl(data) {
-      return this.PATH + '/categories/tree_plus.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf;
-    } }, { key: "detailsUrl",
-    //菜品详情
-    value: function detailsUrl(data) {
-      return this.PATH + '/recipes/show_v2.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf + "&&mode=full" + "&id=" + data.id;
-    } }, { key: "searchSelectUrl",
-    //菜品详情
-    value: function searchSelectUrl(data) {
-      return this.PATH + '/search/prefix_keyword_suggester.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf + "&&mode=full" + "&q=" + data.q;
-    } }, { key: "hotSearchUrl",
-    //热门搜索
-    value: function hotSearchUrl(data) {
-      return this.PATH + '/search/keyword_hour.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf;
-    } }, { key: "searchDetaileUrl",
-    //搜索详
-    value: function searchDetaileUrl(data) {
-      return Url.PATH + '/search/universal_search_v2.json';
-    } }]);return Url;}();exports.default = Url;_defineProperty(Url, "PATH", "https://www.xiachufang.com/juno/api/v2");
-
-/***/ }),
-
-/***/ 2:
+/* 2 */
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -2643,11 +2478,13 @@ Dep.SharedObject.targetStack = [];
 function pushTarget (target) {
   Dep.SharedObject.targetStack.push(target);
   Dep.SharedObject.target = target;
+  Dep.target = target;
 }
 
 function popTarget () {
   Dep.SharedObject.targetStack.pop();
   Dep.SharedObject.target = Dep.SharedObject.targetStack[Dep.SharedObject.targetStack.length - 1];
+  Dep.target = Dep.SharedObject.target;
 }
 
 /*  */
@@ -7416,7 +7253,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"食典录","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7437,14 +7274,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"食典录","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"食典录","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7488,13 +7325,14 @@ function cloneWithData(vm) {
   }, ret);
 
   // vue-composition-api
-  var rawBindings = vm.__secret_vfa_state__ && vm.__secret_vfa_state__.rawBindings;
+  var compositionApiState = vm.__composition_api_state__ || vm.__secret_vfa_state__;
+  var rawBindings = compositionApiState && compositionApiState.rawBindings;
   if (rawBindings) {
     Object.keys(rawBindings).forEach(function (key) {
       ret[key] = vm[key];
     });
   }
-  
+
   //TODO 需要把无用数据处理掉，比如 list=>l0 则 list 需要移除，否则多传输一份数据
   Object.assign(ret, vm.$mp.data || {});
   if (
@@ -7529,7 +7367,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"食典录","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7817,7 +7655,7 @@ function internalMixin(Vue) {
   };
 
   Vue.prototype.__map = function(val, iteratee) {
-    //TODO 暂不考虑 string,number
+    //TODO 暂不考虑 string
     var ret, i, l, keys, key;
     if (Array.isArray(val)) {
       ret = new Array(val.length);
@@ -7831,6 +7669,13 @@ function internalMixin(Vue) {
       for (i = 0, l = keys.length; i < l; i++) {
         key = keys[i];
         ret[key] = iteratee(val[key], key, i);
+      }
+      return ret
+    } else if (typeof val === 'number') {
+      ret = new Array(val);
+      for (i = 0, l = val; i < l; i++) {
+        // 第一个参数暂时仍和小程序一致
+        ret[i] = iteratee(i, i);
       }
       return ret
     }
@@ -7928,31 +7773,7 @@ internalMixin(Vue);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
-
-/***/ 20:
-/*!**********************************************************************!*\
-  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/utils/title.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ["是谁来自山川湖海，却囿于昼夜，厨房与爱", "唯有美食与爱不可辜负", "吃是最好的安慰", "家庭料理的不刻意", "孤独的人都要吃饱饭", "没人生来就是好厨师", "我坚信食物的力量", "每时每刻，都有一道唤醒回忆的菜", "对美食与爱的一再坚持", "饥饿是最好的厨师", "味道因回忆更美丽", "我们对食物能表达的最高敬意", "好好吃饭用心生活，比什么都幸福", "做饭是件快乐的事", "食材有性格，食物总动员", "人莫不饮食也，鲜能知味也", "美味调剂生活", "你的吃相是最美的模样", "厨房是幸福的最后堡垒", "那些寂寞又快活的厨子", "爱的火把在厨房点燃", "好的食物包含着温情与良心", "笔耕不辍，厨房不冷", "先知后行，饮食尤甚", "做有灵魂得食物", "别人眼中的虚度生活，在我眼里却是无比珍贵的时光", "认清明天的去向，不忘，昨日的来处", "广厦千间，夜眠仅需六尺，家财万贯，日食不过三餐", "既然生活不满足，那就满足一下自己的胃", "生活不止眼前的苟且，还有诗和美食"];
-
-/***/ }),
-
-/***/ 21:
-/*!***********************************************************************!*\
-  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/utils/images.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ["../../static/sp1.jpg", "../../static/sp2.jpg", "../../static/sp3.jpg", "../../static/sp4.jpg",
-"../../static/sp5.jpg", "../../static/sp6.jpg", "../../static/sp7.jpg", "../../static/sp8.jpg"];
-
-/***/ }),
-
-/***/ 3:
+/* 3 */
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -7982,8 +7803,335 @@ module.exports = g;
 
 
 /***/ }),
+/* 4 */
+/*!******************************************************************!*\
+  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/pages.json ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-/***/ 30:
+
+
+/***/ }),
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 11 */
+/*!******************************************************************!*\
+  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/API/API.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.Api = void 0;var _HttpRequest = _interopRequireDefault(__webpack_require__(/*! ./HttpRequest.js */ 12));
+var _Url = _interopRequireDefault(__webpack_require__(/*! ./Url.js */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+/**
+                                                                                                                                                      * 接口请求
+                                                                                                                                                      */
+var Api = {
+  /**
+             * @param paramObj
+             * @returns {Promise}
+             */
+
+  /**
+                 * 热门菜谱
+                 */
+  getHomeList: function getHomeList(paramObj) {
+    return _HttpRequest.default.get(_Url.default.getHomeListUrl(paramObj), paramObj);
+  },
+  /**
+      * 菜谱分类
+      */
+  getclassList: function getclassList(paramObj) {
+    return _HttpRequest.default.get(_Url.default.classitemUrl(paramObj), paramObj);
+  },
+  /**
+      * 菜谱详情
+      */
+  getCatedetaile: function getCatedetaile(paramObj) {
+    return _HttpRequest.default.get(_Url.default.detailsUrl(paramObj), paramObj);
+  },
+  /**
+      * 搜索联想
+      */
+  searchSelect: function searchSelect(paramObj) {
+    return _HttpRequest.default.get(_Url.default.searchSelectUrl(paramObj), paramObj);
+  },
+  /**
+      * 热门搜索
+      */
+  getHotListItem: function getHotListItem(paramObj) {
+    return _HttpRequest.default.get(_Url.default.hotSearchUrl(paramObj), paramObj);
+  },
+  /**
+      * 搜索详情s
+      */
+  searchDetaile: function searchDetaile(paramObj) {
+    return _HttpRequest.default.post(_Url.default.searchDetaileUrl(paramObj), paramObj);
+  } };exports.Api = Api;
+
+/***/ }),
+/* 12 */
+/*!**************************************************************************!*\
+  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/API/HttpRequest.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+/**
+                                                                                                      * 封装post方法
+                                                                                                      * @param url
+                                                                                                      * @param data
+                                                                                                      * @returns {Promise}
+                                                                                                      */
+function post(url, data) {
+  var promise = new Promise(function (resolve, reject) {
+    wx.request({
+      url: url,
+      data: data,
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' },
+
+      success: function success(res) {
+        if (res.statusCode == 200) {
+          resolve(res);
+        } else {
+          reject(res.data);
+        }
+      },
+      fail: function fail() {
+        utils.showTost('网络错误');
+      } });
+
+  });
+  return promise;
+}
+/**
+   * 封装get方法
+   * @param url
+   * @param data
+   * @returns {Promise}
+   */
+function get(url, data) {
+  var promise = new Promise(function (resolve, reject) {
+    wx.request({
+      url: url,
+      data: data,
+      header: {
+        'content-type': 'application/json' },
+
+      success: function success(res) {
+        if (res.statusCode == 200) {
+          resolve(res);
+        } else {
+          reject(res.data);
+        }
+      },
+      fail: function fail(e) {
+        utils.showTost('网络错误');
+      } });
+
+  });
+  return promise;
+}var _default =
+
+{
+  get: get,
+  post: post };exports.default = _default;
+
+/***/ }),
+/* 13 */
+/*!******************************************************************!*\
+  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/API/Url.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Url = /*#__PURE__*/function () {function Url() {_classCallCheck(this, Url);}_createClass(Url, null, [{ key: "getHomeListUrl",
+
+
+    //主页热门
+    value: function getHomeListUrl(data) {
+      return this.PATH + '/recipes/popular_v3.json?weapp_src=xcf&is_weapp=1&limit=' + data.limit + '&offset=' + data.offset;
+    } }, { key: "classitemUrl",
+    //分类
+    value: function classitemUrl(data) {
+      return this.PATH + '/categories/tree_plus.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf;
+    } }, { key: "detailsUrl",
+    //菜品详情
+    value: function detailsUrl(data) {
+      return this.PATH + '/recipes/show_v2.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf + "&&mode=full" + "&id=" + data.id;
+    } }, { key: "searchSelectUrl",
+    //菜品详情
+    value: function searchSelectUrl(data) {
+      return this.PATH + '/search/prefix_keyword_suggester.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf + "&&mode=full" + "&q=" + data.q;
+    } }, { key: "hotSearchUrl",
+    //热门搜索
+    value: function hotSearchUrl(data) {
+      return this.PATH + '/search/keyword_hour.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf;
+    } }, { key: "searchDetaileUrl",
+    //搜索详
+    value: function searchDetaileUrl(data) {
+      return Url.PATH + '/search/universal_search_v2.json';
+    } }]);return Url;}();exports.default = Url;_defineProperty(Url, "PATH", "https://www.xiachufang.com/juno/api/v2");
+
+/***/ }),
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
+/*!**********************************************************************!*\
+  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/utils/title.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ["是谁来自山川湖海，却囿于昼夜，厨房与爱", "唯有美食与爱不可辜负", "吃是最好的安慰", "家庭料理的不刻意", "孤独的人都要吃饱饭", "没人生来就是好厨师", "我坚信食物的力量", "每时每刻，都有一道唤醒回忆的菜", "对美食与爱的一再坚持", "饥饿是最好的厨师", "味道因回忆更美丽", "我们对食物能表达的最高敬意", "好好吃饭用心生活，比什么都幸福", "做饭是件快乐的事", "食材有性格，食物总动员", "人莫不饮食也，鲜能知味也", "美味调剂生活", "你的吃相是最美的模样", "厨房是幸福的最后堡垒", "那些寂寞又快活的厨子", "爱的火把在厨房点燃", "好的食物包含着温情与良心", "笔耕不辍，厨房不冷", "先知后行，饮食尤甚", "做有灵魂得食物", "别人眼中的虚度生活，在我眼里却是无比珍贵的时光", "认清明天的去向，不忘，昨日的来处", "广厦千间，夜眠仅需六尺，家财万贯，日食不过三餐", "既然生活不满足，那就满足一下自己的胃", "生活不止眼前的苟且，还有诗和美食"];
+
+/***/ }),
+/* 21 */
 /*!******************************************************************************!*\
   !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/static/css/animate.css ***!
   \******************************************************************************/
@@ -7994,18 +8142,6 @@ module.exports = g;
     if(false) { var cssReload; }
   
 
-/***/ }),
-
-/***/ 4:
-/*!******************************************************************!*\
-  !*** /Users/lijiahao/work/uni-食典/uni_cate_cyclopedia/pages.json ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
 /***/ })
-
-}]);
+]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map
